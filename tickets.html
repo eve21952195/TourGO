@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/tickets.css">
+</head>
+
+<body>
+    <!-- 上層選單 -->
+    <nav>
+        <div class="container navbar">
+            <a href="index.html">
+                <img src="image/logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="tickets.html">熱門票券</a></li>
+                <li><a href="outdoor.html">戶外活動</a></li>
+                <li><a href="chart.html">購物車</a></li>
+                <li><a href="#">登入/註冊</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 外層 -->
+    <div class="container ticket">
+        <!-- 左側選單 -->
+        <aside class="fliter">
+            <!-- 地點 -->
+            <div class="fliter_area">
+                <h4>篩選目的地</h4>
+                <div class="searchbar">
+                    <input type="text" placeholder="搜尋目的地">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>北部</span>
+                    <div class="down">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>中部</span>
+                    <div class="down">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>南部</span>
+                    <div class="down">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品類別 -->
+            <div class="fliter_category">
+                <h4>商品類別</h4>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>全部</span>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>博物館 / 展覽 (30)</span>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>景點門票 (26)</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右側表單 -->
+        <main>
+            <!-- 頂部搜尋結果 -->
+            <div class="fliter_result_info">
+                <h4>熱門票券</h4>
+                <div class="fliter_result">
+                    <span>5</span> 項搜尋結果
+                </div>
+                <div class="fliter_sort">
+                    <span>排序方式 :</span>
+                    <select name="">
+                        <option value="hot">熱門程度</option>
+                        <option value="price">價格:低到高</option>
+                        <option value="rank">用戶評價</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 表單內容 -->
+            <ul class="fliter_result_list">
+                <li>
+                    <a href="#">
+                        <div class="product_img img1">
+                            <div class="overlap"></div>
+                        </div>
+                        <div class="product_detail">
+                            <h3>Xpark 都會型水生公園門票</h3>
+                            <div class="product_place">
+                                <i class="fas fa-map-marker-alt"></i>台灣 桃園
+                            </div>
+                            <div class="product_footer">
+                                <div class="product_star">
+                                    <i class="fas fa-star"></i>
+                                    4.3(123)
+                                </div>
+                                <div class="product_price">
+                                    <h4>TWD 550</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="product_img img2">
+                            <div class="overlap"></div>
+                        </div>
+                        <div class="product_detail">
+                            <h3>麗寶樂園摩天輪門票</h3>
+                            <div class="product_place">
+                                <i class="fas fa-map-marker-alt"></i>台灣 台中
+                            </div>
+                            <div class="product_footer">
+                                <div class="product_star">
+                                    <i class="fas fa-star"></i>
+                                    4.0(456)
+                                </div>
+                                <div class="product_price">
+                                    <h4>TWD 500</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="product_img img3">
+                            <div class="overlap"></div>
+                        </div>
+                        <div class="product_detail">
+                            <h3>奧萬大國家森林遊樂區門票</h3>
+                            <div class="product_place">
+                                <i class="fas fa-map-marker-alt"></i>台灣 南投
+                            </div>
+                            <div class="product_footer">
+                                <div class="product_star">
+                                    <i class="fas fa-star"></i>
+                                    4.2(120)
+                                </div>
+                                <div class="product_price">
+                                    <h4>TWD 150</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="product_img img4">
+                            <div class="overlap"></div>
+                        </div>
+                        <div class="product_detail">
+                            <h3>九族文化村門票雙人野餐組</h3>
+                            <div class="product_place">
+                                <i class="fas fa-map-marker-alt"></i>台灣 南投
+                            </div>
+                            <div class="product_footer">
+                                <div class="product_star">
+                                    <i class="fas fa-star"></i>
+                                    4.0(572)
+                                </div>
+                                <div class="product_price">
+                                    <h4>TWD 750</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="detail.html">
+                        <div class="product_img img5">
+                            <div class="overlap"></div>
+                        </div>
+                        <div class="product_detail">
+                            <h3>Pingu企鵝家族的誕生</h3>
+                            <div class="product_place">
+                                <i class="fas fa-map-marker-alt"></i>台灣 台北
+                            </div>
+                            <div class="product_footer">
+                                <div class="product_star">
+                                    <i class="fas fa-star"></i>
+                                    4.3(95)
+                                </div>
+                                <div class="product_price">
+                                    <h4>TWD 350</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container footer">
+            <ul>
+                <li>
+                    <p>關於我們</p>
+                    <ul>
+                        <li>
+                            <a href="#">認識我們</a>
+                        </li>
+                        <li>
+                            <a href="#">版權聲明</a>
+                        </li>
+                        <li>
+                            <a href="#">工作機會</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>夥伴</p>
+                    <ul>
+                        <li>
+                            <a href="#">如何成為夥伴</a>
+                        </li>
+                        <li>
+                            <a href="#">夥伴獨家福利</a>
+                        </li>
+                        <li>
+                            <a href="#">加入夥伴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>用戶</p>
+                    <ul>
+                        <li>
+                            <a href="#">使用者條款</a>
+                        </li>
+                        <li>
+                            <a href="#">常見問答</a>
+                        </li>
+                        <li>
+                            <a href="#">聯繫客服</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p>© 2022 TOUR GO</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

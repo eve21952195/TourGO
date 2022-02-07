@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/chart_check.css">
+</head>
+
+<body>
+    <!-- 上層選單 -->
+    <nav>
+        <div class="container navbar">
+            <a href="index.html">
+                <img src="image/logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="tickets.html">熱門票券</a></li>
+                <li><a href="outdoor.html">戶外活動</a></li>
+                <li><a href="chart.html">購物車</a></li>
+                <li><a href="#">登入/註冊</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 結帳進度條 -->
+    <div class="container step">
+        <ul>
+            <li>
+                <span>1</span>
+                <p>購物車</p>
+                <div class="bar "></div>
+            </li>
+            <li>
+                <span>2</span>
+                <p>填寫資料</p>
+                <div class="bar"></div>
+            </li>
+            <li>
+                <span>3</span>
+                <p>確認訂單</p>
+                <div class="bar focus"></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 結帳主頁 -->
+    <div class="container outer d-flex">
+        <!-- 左側 -->
+        <div class="left">
+            <table class="list">
+                <tr>
+                    <th width="17%" class="pic"></th>
+                    <th width="25%">品名</th>
+                    <th width="15%">單價</th>
+                    <th width="10%">數量</th>
+                    <th width="18%" class="total">小計</th>
+                </tr>
+                <tr>
+                    <td class="pic">
+                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
+                            alt="">
+                    </td>
+                    <td class="title">Pingu企鵝家族的誕生</td>
+                    <td>NT$350</td>
+                    <td>1</td>
+                    <td>NT$350</td>
+                </tr>
+                <tr>
+                    <td class="pic">
+                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
+                            alt="">
+                    </td>
+                    <td class="title">小小兵大視界特展門票</td>
+                    <td>NT$159</td>
+                    <td>1</td>
+                    <td>NT$159</td>
+                </tr>
+                <tr>
+                    <td class="pic">
+                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
+                            alt="">
+                    </td>
+                    <td class="title">湯姆貓與傑利鼠特展門票</td>
+                    <td>NT$280</td>
+                    <td>1</td>
+                    <td>NT$280</td>
+                </tr>
+                <tr class="discount">
+                    <td colspan="3"></td>
+                    <td>折扣金額</td>
+                    <td>0</td>
+                </tr>
+                <tr class="totalprice">
+                    <td colspan="3"></td>
+                    <td>付款金額</td>
+                    <td>NT$789</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 右側 -->
+        <div class="right">
+            <table>
+                <tr>
+                    <th colspan="2">聯絡人資料</th>
+                </tr>
+                <tr>
+                    <td width="30%">姓名:</td>
+                    <td>王小美</td>
+                </tr>
+                <tr>
+                    <td>電話:</td>
+                    <td>09183746839</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>eve21952195@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>付款方式:</td>
+                    <td>ATM</td>
+                </tr>
+            </table>
+            <a href="#" class="btn">確認付款</a>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container footer">
+            <ul>
+                <li>
+                    <p>關於我們</p>
+                    <ul>
+                        <li>
+                            <a href="#">認識我們</a>
+                        </li>
+                        <li>
+                            <a href="#">版權聲明</a>
+                        </li>
+                        <li>
+                            <a href="#">工作機會</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>夥伴</p>
+                    <ul>
+                        <li>
+                            <a href="#">如何成為夥伴</a>
+                        </li>
+                        <li>
+                            <a href="#">夥伴獨家福利</a>
+                        </li>
+                        <li>
+                            <a href="#">加入夥伴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>用戶</p>
+                    <ul>
+                        <li>
+                            <a href="#">使用者條款</a>
+                        </li>
+                        <li>
+                            <a href="#">常見問答</a>
+                        </li>
+                        <li>
+                            <a href="#">聯繫客服</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p>© 2022 TOUR GO</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+@import url("reset.css");
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    line-height: 1.6;
+    font-family: 'Noto Sans TC','微软雅黑','Microsoft YaHei',sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #333;
+    letter-spacing: .15rem;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0px 15px;
+}
+
+/*====================== 上層選單 ======================*/
+
+nav{
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+    /* position: fixed 會使.top寬度最大變最小  */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* width: 100%; 把寬度加回來 */
+    width: 100%;
+    z-index: 999;
+    
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    /* outline: 1px solid green; */
+}
+
+.navbar > a{
+    /* outline: 1px solid red; */
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar img{
+   height: 40px;
+}
+
+
+.navbar ul{
+    /* border:  1px solid ; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar li{
+    padding: 19px 0;
+    position: relative;
+}
+
+.navbar li a{
+    display: block;
+    font-weight: bold;
+    padding: 0 18px;
+}
+
+.navbar li:hover a{
+    color: #26bec9;
+}
+
+/* hover底線 */
+.navbar li:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #26bec9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+/* 分隔線 */
+.navbar li:not(:last-child)::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #acacac;
+    position: absolute;
+
+    /* 垂直置中向右 */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*====================== 輪播圖 ======================*/
+
+.slide{
+background-image: url("https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20211110110932_x14tx/jpg");
+height: 650px;
+background-size: cover;
+background-position: 50%;
+}
+
+/*====================== 外層 ======================*/
+
+.product_overview{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+/* 左側 */
+.product_info{
+    width: 792px;
+}
+
+/* 標題 */
+.product_name{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0 20px;
+}
+
+.product_name h1{
+    font-size: 2.4rem;
+    font-weight: 400;
+    
+}
+
+.btn_wish{
+    font-size: 2.4rem;
+    color: #666;
+}
+
+
+/* icon圖示 */
+.product_tip{
+    display: flex;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 25px 0;
+}
+
+.critical_info{
+    color: #666;
+    margin-right: 30px;
+}
+
+.critical_info i{
+    padding-right: 5px;
+}
+
+.critical_info span{
+    font-size: 1.5rem;
+    
+}
+
+/* 簡介 */
+.product_info p{
+    font-size: 1.4rem;
+    padding: 30px 0 10px;
+    
+}
+
+.product_info ul{
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+
+.product_info ul li{
+    padding: 5px 0;
+    
+}
+
+/* 右側 */
+
+.product_aside{
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 357px;
+    padding: 12px 15px;
+}
+
+.product_aside h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+.product_aside .critical_info{
+    padding: 5px 0;
+}
+
+.product_aside i{
+    color: #26bec9;
+}
+
+.product_aside span{
+    font-size: 1.4rem;
+}
+
+a.btn{
+    display: block;
+    font-size: 1.4rem;
+    width: 100%;
+    background-color: #26bec9;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 13px 10px;
+    font-weight: 500;
+    margin: 10px 0 15px;
+    transition: all .5s;
+
+}
+
+a.btn:hover{
+    background-color: hsl(184, 68%, 40%);
+}
+
+
+/*====================== 選擇方案 ======================*/
+
+.option_section{
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+
+
+.product_option{}
+
+.product_option > h3{
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 個別方案框 */
+.option-item{
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.option_content{}
+
+.option_content h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.option_content ul{
+    list-style: disc;
+    padding: 10px 0 0 20px;
+    margin-bottom: 10px;
+}
+
+.option_content li{
+    font-size: 1.4rem;
+    padding: 5px 0;
+}
+
+.option_action{
+    display: flex;
+    align-items: center;
+}
+
+.option_action h4{
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-right: 20px;
+}
+
+.option_action a{
+    /* display: inline-block; */
+    padding: 10px 24px;
+    color: #26bec9;
+    background-color: #fff;
+    border: 1.5px solid rgba(38,190,201,.7);
+    width: 110px;
+    margin: 0;
+}
+
+.option_action a:hover{
+    background-color: rgba(38,190,201,.2);
+}
+
+
+/*====================== 商品說明 ======================*/
+.product_detail{
+    padding-top: 40px;
+}
+
+.container_left{
+    width: 792px;
+}
+
+.container_left h3{
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.container_left ul{
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.container_left li{
+    padding: 5px 0;
+}
+
+.container_left img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+
+.img1{}
+
+.img2{}
+
+.img3{}
+
+/*====================== 活動地點 ======================*/
+
+.map{
+    padding-top: 40px;
+}
+
+.map h4{
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.map p{
+    color: #666;
+    padding-left: 20px;
+}
+
+iframe{
+    width: 100%;
+    padding: 20px;
+}
+
+/*====================== footer ======================*/
+
+footer{
+    background-color: rgb(42, 42, 46);
+    margin-top: 100px;
+}
+
+.footer p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+    margin-bottom: 10px;
+    letter-spacing: .5px;
+}
+
+.footer ul a{
+    color: #f4f4f4;
+    font-weight: 400;
+    transition: all .25s;
+    letter-spacing: .5px;
+}
+
+.footer ul a:hover{
+    opacity: .5;
+}
+
+.footer > ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0 64px 0;
+    border-bottom: 1px solid rgb(83, 83, 83);
+}
+
+
+.copyright{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright p{
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.copyright ul{
+    display: flex;
+}
+
+.copyright li{}
+
+.copyright a{
+    padding: 0 8px;
+}
+
+.copyright i{
+    font-size: 1.4rem;
+    
+}

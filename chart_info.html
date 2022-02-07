@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/chart_info.css">
+</head>
+
+<body>
+    <!-- 上層選單 -->
+    <nav>
+        <div class="container navbar">
+            <a href="index.html">
+                <img src="image/logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="tickets.html">熱門票券</a></li>
+                <li><a href="outdoor.html">戶外活動</a></li>
+                <li><a href="chart.html">購物車</a></li>
+                <li><a href="#">登入/註冊</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 結帳進度條 -->
+    <div class="container step">
+        <ul>
+            <li>
+                <span>1</span>
+                <p>購物車</p>
+                <div class="bar "></div>
+            </li>
+            <li>
+                <span>2</span>
+                <p>填寫資料</p>
+                <div class="bar focus"></div>
+            </li>
+            <li>
+                <span>3</span>
+                <p>確認訂單</p>
+                <div class="bar"></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 外層 -->
+    <div class="container outer">
+        <!-- 左側資料 -->
+        <div class="left">
+            <div class="forms">
+                <div class="form_group">
+                    <label for="name">收件人姓名:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form_group">
+                    <label for="tel">電話:</label>
+                    <input type="tel" id="tel">
+                </div>
+            </div>
+            <div class="form_group">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form_group">
+                <label for="waytopay">付款方式:</label>
+                <select name="waytopay" id="waytopay">
+                    <option value="" selected="selected" disabled="disabled">請選擇付款方式</option>
+                    <option value="WebATM">WebATM</option>
+                    <option value="ATM">ATM</option>
+                    <option value="Credit">Credit</option>
+                    <option value="ApplePay">ApplePay</option>
+                </select>
+            </div>
+            <div class="back">
+                <a href="chart.html" class="back_btn">
+                    <i class="fas fa-chevron-left"></i>
+                    返回購物車</a>
+                <a href="chart_check.html" class="btn">確認送出</a>
+            </div>
+
+        </div>
+
+        <!-- 右側明細 -->
+        <div class="right">
+            <div class="product">
+                <img src="https://image.kkday.com/v2/image/get/h_650,c_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
+                    alt="">
+                <div class="product_info">
+                    <p class="title">Pingu企鵝家族的誕生</p>
+                    <p>NT$350 x1</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
+                    alt="">
+                <div class="product_info">
+                    <p class="title">小小兵大視界特展門票</p>
+                    <p>NT$159 x1</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
+                    alt="">
+                <div class="product_info">
+                    <p class="title">湯姆貓與傑利鼠特展門票</p>
+                    <p>NT$280 x1</p>
+                </div>
+            </div>
+            <div class="totalprice">
+                <p>總計</p>
+                <p class="total">NT$789</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container footer">
+            <ul>
+                <li>
+                    <p>關於我們</p>
+                    <ul>
+                        <li>
+                            <a href="#">認識我們</a>
+                        </li>
+                        <li>
+                            <a href="#">版權聲明</a>
+                        </li>
+                        <li>
+                            <a href="#">工作機會</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>夥伴</p>
+                    <ul>
+                        <li>
+                            <a href="#">如何成為夥伴</a>
+                        </li>
+                        <li>
+                            <a href="#">夥伴獨家福利</a>
+                        </li>
+                        <li>
+                            <a href="#">加入夥伴</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>用戶</p>
+                    <ul>
+                        <li>
+                            <a href="#">使用者條款</a>
+                        </li>
+                        <li>
+                            <a href="#">常見問答</a>
+                        </li>
+                        <li>
+                            <a href="#">聯繫客服</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p>© 2022 TOUR GO</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

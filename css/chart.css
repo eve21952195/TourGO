@@ -1,0 +1,374 @@
+@import url("reset.css");
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    line-height: 1.6;
+    font-family: 'Noto Sans TC','微软雅黑','Microsoft YaHei',sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #333;
+    letter-spacing: .15rem;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0px 30px;
+}
+
+/*====================== 上層選單 ======================*/
+
+nav{
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+    /* position: fixed 會使.top寬度最大變最小  */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* width: 100%; 把寬度加回來 */
+    width: 100%;
+    z-index: 999;
+    
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    /* outline: 1px solid green; */
+}
+
+.navbar > a{
+    /* outline: 1px solid red; */
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar img{
+   height: 40px;
+}
+
+
+.navbar ul{
+    /* border:  1px solid ; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar li{
+    padding: 19px 0;
+    position: relative;
+}
+
+.navbar li a{
+    display: block;
+    font-weight: bold;
+    padding: 0 18px;
+}
+
+.navbar li:hover a{
+    color: #26bec9;
+}
+
+/* hover底線 */
+.navbar li:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #26bec9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+/* 分隔線 */
+.navbar li:not(:last-child)::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #acacac;
+    position: absolute;
+
+    /* 垂直置中向右 */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*====================== 結帳進度條 ======================*/
+.step{
+    margin-top: 120px;
+}
+
+.step ul{
+    /* background-color: rgb(228, 226, 226); */
+    display: flex;
+    justify-content: space-between;
+    color: #26bec9;
+    padding: 0 58px;
+    
+}
+
+.step li{
+    width: 33.3%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #26bec9;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+
+}
+
+.step p{
+    padding: 15px 0 20px;
+    font-size: 1.6rem;
+}
+
+.bar{
+    background-color: rgba(19, 106, 112, 0.2);
+    width: 100%;
+    height: 5px;
+}
+
+.focus{
+    background-color: #26bec9;
+    width: 100%;
+    height: 5px;
+}
+
+/*====================== 結帳主頁 ======================*/
+
+.outer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* 左側表格 */
+
+.left{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 750px;
+    
+}
+
+table{
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+
+tr{
+    text-align: center;
+    /* border-top: 1px solid #ddd; */
+}
+
+th{
+    padding: 5px;
+}
+
+td{
+    padding: 18px 5px;
+    vertical-align: middle;
+    border-top: .5px solid #ddd;
+}
+
+tr td:not([class="title"]){
+    letter-spacing: 0;
+}
+
+.pic{
+    padding-left: 20px;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    
+}
+
+/* 右側 */
+
+.right{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 350px;
+    padding: 16px;
+}
+
+.product_sum{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.right p{
+    font-size: 1.6rem;
+    color: #707070;
+}
+
+p.price{
+    letter-spacing: 0;
+}
+
+/* 輸入折扣碼 */
+.discount_code{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount_code input{
+    width: 80%;
+    border-radius: 0;
+    border: 1px solid #26bec9;
+    padding: 5px 10px;
+}
+
+.discount_code button{
+    width: 20%;
+    padding: 5px;
+    border-radius: 0;
+    background: #26bec9;
+    border: 1px solid #26bec9;
+    color: #fff;
+    transition: all .5s;
+   
+}
+
+.discount_code button:hover{
+    background-color: hsl(184, 68%, 40%);
+}
+
+.discount_info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.discount_info p:nth-child(2){
+    color: rgb(248, 18, 18);
+}
+
+.total_price{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed #ddd;
+    padding: 20px 0;
+}
+
+.total_price p:nth-child(2){
+    font-weight: 700;
+}
+
+a.btn{
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #26bec9;
+    color: #fff;
+    transition: all .5s;
+}
+
+a.btn:hover{
+    background-color: hsl(184, 68%, 40%);
+}
+
+
+/*====================== footer ======================*/
+
+footer{
+    background-color: rgb(42, 42, 46);
+    margin-top: 100px;
+}
+
+.footer p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+    margin-bottom: 10px;
+    letter-spacing: .5px;
+}
+
+.footer ul a{
+    color: #f4f4f4;
+    font-weight: 400;
+    transition: all .25s;
+    letter-spacing: .5px;
+}
+
+.footer ul a:hover{
+    opacity: .5;
+}
+
+.footer > ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0 64px 0;
+    border-bottom: 1px solid rgb(83, 83, 83);
+}
+
+
+.copyright{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright p{
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.copyright ul{
+    display: flex;
+}
+
+.copyright li{}
+
+.copyright a{
+    padding: 0 8px;
+}
+
+.copyright i{
+    font-size: 1.4rem;
+    
+}
