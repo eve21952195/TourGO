@@ -1,122 +1,7 @@
 @import url("reset.css");
 
-*{
-    box-sizing: border-box;
-}
+@import url("module.css");
 
-html{
-    font-size: 10px;
-}
-
-body{
-    line-height: 1.6;
-    font-family: 'Noto Sans TC','微软雅黑','Microsoft YaHei',sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    background-color: #fff;
-    color: #333;
-    letter-spacing: .15rem;
-    
-}
-
-a{
-    color: #333;
-    text-decoration: none;
-}
-
-.container{
-    /* outline: 1px solid red; */
-    margin: 0 auto;
-    width: 1200px;
-    padding: 0 15px;
-}
-
-
-/*====================== 上層選單 ======================*/
-
-nav{
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
-    /* position: fixed 會使.top寬度最大變最小  */
-    position: fixed;
-    left: 0;
-    top: 0;
-    /* width: 100%; 把寬度加回來 */
-    width: 100%;
-    z-index: 999;
-    
-}
-
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    /* outline: 1px solid green; */
-}
-
-.navbar > a{
-    /* outline: 1px solid red; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.navbar img{
-   height: 40px;
-}
-
-
-.navbar ul{
-    /* border:  1px solid ; */
-    display: flex;
-    align-items: center;
-}
-
-.navbar li{
-    padding: 19px 0;
-    position: relative;
-}
-
-.navbar li a{
-    display: block;
-    font-weight: bold;
-    padding: 0 18px;
-}
-
-.navbar li:hover a{
-    color: #26bec9;
-}
-
-/* hover底線 */
-.navbar li:hover::after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #26bec9;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-}
-
-
-/* 分隔線 */
-.navbar li:not(:last-child)::before{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 15px;
-    background-color: #acacac;
-    position: absolute;
-
-    /* 垂直置中向右 */
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
 
 /*====================== 大圖banner ======================*/
 
@@ -176,10 +61,30 @@ nav{
     box-shadow: 0px 5px 8px rgb(51 51 51 / 20%);
 }
 
+@media screen and (max-width: 768px){
+    .banner{
+        height: 200px;
+        margin-bottom: 32px;
+    }
+    .banner_inner h1{
+        color: rgb(253, 253, 253);
+        text-shadow: 0 2px 8px rgb(51 51 51 / 30%);
+        font-size: 2.4rem;
+    }
+    .banner_inner h5{
+        color: rgb(253, 253, 253);
+        font-size: 1.4rem;
+        text-shadow: 0px 2px 8px rgb(51 51 51 / 30%);
+    }
+    .banner_btn{
+       display: none;
+    }
+
+}
+
 /*====================== 活動分類 ======================*/
 
 .act_category{
-    /* outline: 1px solid; */
 }
 
 h2{
@@ -202,23 +107,15 @@ h2{
 
 }
 
-.act_category ul{
-    display: flex;
-    justify-content: space-between;
-}
+.act_category .owl-carousel{}
 
-.act_category li{
+
+.act_category .item{
+    position: relative;
 }
 
 .act_category a{
-    /* border: 1px solid blue; */
     display: block;
-    /* 先在a 設定圖片大小 */
-    /* 直接在img設大小 a下方都會多一小塊? */
-    width: 280px;
-    height: 200px;
-
-    position: relative;
 }
 
 .act_category img{
@@ -226,36 +123,135 @@ h2{
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
-}
-
-.act_category .overlap{
-    background-color: #000;
-    opacity: .2;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+    filter: brightness(.9);
     transition: all .5s;
-    border-radius: 6px;
-    
 }
 
-.act_category .overlap:hover{
-    background-color: #fff;
-    opacity: .1;
+.act_category img:hover{
+    opacity: .8;
+    filter: brightness(1);
 }
 
+/* 方向鍵 */
+.owl-carousel.owl-theme .owl-nav button{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255,.9);
+    border-radius: 50%;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 15%);
+    position: absolute;
+    top: 30%;
+}
+
+.owl-carousel.owl-theme .owl-nav button:hover{
+    background-color: rgba(212, 212, 212, 0.9);
+    color: #fff;
+}
+
+button.owl-prev{
+    left: -20px;
+}
+
+button.owl-next{
+    right: -20px;
+}
+
+
+.owl-carousel .owl-nav i{
+    font-size: 24px;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 768px){
+    h2{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .act_category h3{
+        font-size: 1.4rem;
+    }
+
+    .owl-theme .owl-dots .owl-dot span{
+        width: 8px;    
+        height: 8px;
+    }
+
+    .act_category .owl-theme .owl-nav{
+        display: none;
+    }
+
+    .owl-theme .owl-dots{
+        margin-top: 8px;
+    }
+
+}
 /*====================== 近期推薦 ======================*/
 
-/* 有時間再加 左右切換箭頭 */
-.act_ad{
+
+.container.act_ad{
     margin-top: 60px;
 }
 
 .act_ad img{
     width: 100%;
 }
+
+/* 插件輪播圖 */
+.owl-carousel{
+    position: relative;
+}
+
+.owl-carousel.act_ad .item{
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* 方向鍵 */
+.owl-carousel.owl-theme .owl-nav button{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255,.9);
+    border-radius: 50%;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 15%);
+    position: absolute;
+    top: 30%;
+}
+
+.owl-carousel.owl-theme .owl-nav button:hover{
+    background-color: rgba(212, 212, 212, 0.9);
+    color: #fff;
+}
+
+button.owl-prev{
+    left: -20px;
+}
+
+button.owl-next{
+    right: -20px;
+}
+
+
+.owl-carousel .owl-nav i{
+    font-size: 24px;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 768px){
+    .container.act_ad{
+        margin-top: 32px;
+    }
+   
+    .owl-carousel.owl-theme .owl-nav button{
+        display: none;
+    }
+    
+}
+
+
+
+
 
 /*====================== 想去哪裡玩 ======================*/
 
@@ -267,7 +263,6 @@ h2{
     display: flex;
     height: 330px;
     justify-content: space-between;
-    
 }
 
 .act_area li{
@@ -275,12 +270,14 @@ h2{
     background-position: 50%;
     transition: .5s; 
     border-radius: 6px;
+    flex-grow: 1;
     
 }
 
 .act_area li:not(:last-child){
     margin-right: 20px;
 }
+
 
 .act_area .area1{
     background-image: url("https://image.kkday.com/v2/image/get/w_628%2Ch_472%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/campaign_863/20191219025154_amcag/jpg");
@@ -306,6 +303,7 @@ h2{
     background-image: url("https://image.kkday.com/v2/image/get/w_628%2Ch_472%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/campaign_1345/20210426065849_WTWIk/jpg");
     flex-grow: 1;
 }
+
 
 .act_area li:hover{
     flex-grow: 3;
@@ -344,72 +342,69 @@ h2{
 .act_area .overlap:hover{
     background-color: #fff;
     opacity: .1;
-    /* background-image:linear-gradient(transparent 60%,rgba(255, 255, 255, 0.2)); */
+    background-image:linear-gradient(transparent 60%,rgba(255, 255, 255, 0.2));
+}
+
+@media screen and (max-width: 768px){
+    .act_area{
+        margin-top: 32px;
+    }
+    .act_area h4{
+        font-size: 1.4rem;
+    }
+    .act_area ul{
+        height: 130px;
+        overflow: auto;
+    }
+    .act_area li{
+        background-size: cover;
+        background-position: 50%;
+        transition: .5s; 
+        border-radius: 6px;
+        width: 130px;
+        height: 130px;
+        flex-shrink: 0;
+    }
+    .act_area li:not(:last-child){
+        margin-right: 10px;
+    }
+
+
 }
 
 /*====================== 熱門商品 ======================*/
 
-.act_rank{
+.container.act_rank{
     margin-top: 60px;
 }
 .act_rank h2{}
 
-.act_rank ul{
-    /* outline: 1px solid; */
-    display: flex;
-    justify-content: space-between;
-}
+.act_rank .owl-carousel{}
 
 
 .act_rank a{
     display: block;
-    width: 284px;
 }
 
 .product_img{
-    height: 160px;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 6px 6px 0 0;
-
-    position: relative;
-}
-
-.product_img .overlap{
-    position: absolute;
+    display: block;
+    /* 先把img框出固定長寬,設定圖片在裡面填滿 */
     width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    transition: all .8s;
-    background-color: #000;
-    opacity: .1;
-    /* 會閃? */
-    /* background-image:linear-gradient(transparent 60%,rgba(0,0,0,.35)); */
+    height: 160px;
+    object-fit: cover;
+    object-position: center center;
     border-radius: 6px 6px 0 0;
+
+    filter: brightness(.9);
+    transition: all .5s;
+
 }
 
-/* 會閃? */
-.product_img .overlap:hover{
-    background-color: #fff;
-    opacity: .15;
+.act_rank .item:hover .product_img{
+    opacity: .8;
+    filter: brightness(1);
 }
 
-.img1{
-    background-image: url("https://image.kkday.com/v2/image/get/w_481%2Ch_280%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/product_101517/20220113021116_z1ha0/jpg");
-}
-
-.img2{
-    background-image: url("https://image.kkday.com/v2/image/get/w_481%2Ch_280%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/product_19796/20180820034205_uFYr6/jpg");
-}
-
-.img3{
-    background-image: url("https://image.kkday.com/v2/image/get/w_481%2Ch_280%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/product_100569/20200529080004_TKa2Y/jpg");
-}
-
-.img4{
-    background-image: url("https://image.kkday.com/v2/image/get/w_481%2Ch_280%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/product_18440/20211231130438_YbGwt/jpg");
-}
 
 .product_detail{
     padding: 4px 10px 15px 10px;
@@ -424,6 +419,12 @@ h2{
     color: #333;
     margin-bottom: 10px;
     letter-spacing: .15rem;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 
 }
 
@@ -469,63 +470,43 @@ h2{
 }
 
 
-/*====================== footer ======================*/
+@media screen and (max-width: 768px){
+    .container.act_rank{
+        margin-top: 32px;
+    }
 
-footer{
-    background-color: rgb(42, 42, 46);
-    margin-top: 100px;
-}
+    .product_img{
+        height: 100px;
+    }
 
-.footer p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: rgb(155, 155, 155);
-    margin-bottom: 10px;
-    letter-spacing: .5px;
-}
-
-.footer ul a{
-    color: #f4f4f4;
-    font-weight: 400;
-    transition: all .25s;
-    letter-spacing: .5px;
-}
-
-.footer ul a:hover{
-    opacity: .5;
-}
-
-.footer > ul{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px 0 64px 0;
-    border-bottom: 1px solid rgb(83, 83, 83);
-}
-
-
-.copyright{
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.copyright p{
-    font-size: 1.4rem;
-    font-weight: 100;
-    margin-bottom: 0;
-}
-
-.copyright ul{
-    display: flex;
-}
-
-.copyright li{}
-
-.copyright a{
-    padding: 0 8px;
-}
-
-.copyright i{
-    font-size: 1.4rem;
+    .product_detail h3{
+        font-size: 1.6rem;
+        padding-left: 5px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: .1rem;
+        overflow: hidden;
+        /* white-space: nowrap; */
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
     
+    }
+    
+    .product_detail .product_footer{
+        display: block;
+    }
+    
+    .product_footer .product_star{
+        margin-bottom: 8px;
+    }
+    
+    .product_price h4{
+        font-size: 1.6rem;
+        padding-left: 5px;
+        letter-spacing: 0;
+    }
+
 }

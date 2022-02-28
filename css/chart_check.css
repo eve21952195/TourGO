@@ -1,122 +1,7 @@
 @import url("reset.css");
 
-@import url("reset.css");
+@import url("module.css");
 
-*{
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 10px;
-}
-
-body{
-    line-height: 1.6;
-    font-family: 'Noto Sans TC','微软雅黑','Microsoft YaHei',sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    background-color: #fff;
-    color: #333;
-    letter-spacing: .15rem;
-}
-
-a{
-    color: #333;
-    text-decoration: none;
-}
-
-.container{
-    margin: 0 auto;
-    width: 1200px;
-    padding: 0px 30px;
-}
-
-/*====================== 上層選單 ======================*/
-
-nav{
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
-    /* position: fixed 會使.top寬度最大變最小  */
-    position: fixed;
-    left: 0;
-    top: 0;
-    /* width: 100%; 把寬度加回來 */
-    width: 100%;
-    z-index: 999;
-    
-    
-}
-
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    /* outline: 1px solid green; */
-}
-
-.navbar > a{
-    /* outline: 1px solid red; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.navbar img{
-   height: 40px;
-}
-
-
-.navbar ul{
-    /* border:  1px solid ; */
-    display: flex;
-    align-items: center;
-}
-
-.navbar li{
-    padding: 19px 0;
-    position: relative;
-}
-
-.navbar li a{
-    display: block;
-    font-weight: bold;
-    padding: 0 18px;
-}
-
-.navbar li:hover a{
-    color: #26bec9;
-}
-
-/* hover底線 */
-.navbar li:hover::after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #26bec9;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-}
-
-
-/* 分隔線 */
-.navbar li:not(:last-child)::before{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 15px;
-    background-color: #acacac;
-    position: absolute;
-
-    /* 垂直置中向右 */
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
 
 /*====================== 結帳進度條 ======================*/
 .step{
@@ -178,13 +63,35 @@ nav{
     align-items: flex-start;
 }
 
+@media screen and (max-width:768px){
+    .outer{
+        display: block;
+    }
+}
+
 /* 左側表格 */
 
 .left{
     border: 1px solid #ddd;
     border-radius: 6px;
-    width: 750px;
-    
+}
+
+@media screen and (min-width: 768px){
+    .left{
+        width: 425px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .left{
+        width: 640px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .left{
+        width: 780px;
+    }
 }
 
 table{
@@ -242,13 +149,41 @@ table.list td:not([class="title"]){
     letter-spacing: 0;
 }
 
+@media screen and (max-width:768px){
+    .left{
+        margin-bottom: 20px;
+    }
+    .left .pic{
+        width: 0%;
+        padding-left: 0px;
+    }
+}
+
+
 /* 右側 */
 
 .right{
     border: 1px solid #ddd;
     border-radius: 6px;
-    width: 350px;
     padding: 0 16px 16px 16px;
+}
+
+@media screen and (min-width: 768px){
+    .right{
+        width: 280px;  
+    }
+}
+
+@media screen and (min-width: 992px){
+    .right{
+        width: 280px;  
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .right{
+        width: 370px;  
+    }
 }
 
 .right table{
@@ -267,6 +202,9 @@ table.list td:not([class="title"]){
     padding: 5px 0;
 }
 
+table .phone,table .email{
+    letter-spacing: 0;
+}
 
 a.btn{
     display: block;
@@ -282,63 +220,3 @@ a.btn:hover{
     background-color: hsl(184, 68%, 40%);
 }
 
-/*====================== footer ======================*/
-
-footer{
-    background-color: rgb(42, 42, 46);
-    margin-top: 100px;
-}
-
-.footer p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: rgb(155, 155, 155);
-    margin-bottom: 10px;
-    letter-spacing: .5px;
-}
-
-.footer ul a{
-    color: #f4f4f4;
-    font-weight: 400;
-    transition: all .25s;
-    letter-spacing: .5px;
-}
-
-.footer ul a:hover{
-    opacity: .5;
-}
-
-.footer > ul{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px 0 64px 0;
-    border-bottom: 1px solid rgb(83, 83, 83);
-}
-
-
-.copyright{
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.copyright p{
-    font-size: 1.4rem;
-    font-weight: 100;
-    margin-bottom: 0;
-}
-
-.copyright ul{
-    display: flex;
-}
-
-.copyright li{}
-
-.copyright a{
-    padding: 0 8px;
-}
-
-.copyright i{
-    font-size: 1.4rem;
-    
-}

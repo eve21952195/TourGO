@@ -24,99 +24,101 @@
                 <li><a href="chart.html">購物車</a></li>
                 <li><a href="#">登入/註冊</a></li>
             </ul>
+            <a href="#" class="hamBar"><i class="fas fa-bars"></i></a>
         </div>
     </nav>
 
-    <!-- 結帳進度條 -->
-    <div class="container step">
-        <ul>
-            <li>
-                <span>1</span>
-                <p>購物車</p>
-                <div class="bar "></div>
-            </li>
-            <li>
-                <span>2</span>
-                <p>填寫資料</p>
-                <div class="bar focus"></div>
-            </li>
-            <li>
-                <span>3</span>
-                <p>確認訂單</p>
-                <div class="bar"></div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- 外層 -->
-    <div class="container outer">
-        <!-- 左側資料 -->
-        <div class="left">
-            <div class="forms">
-                <div class="form_group">
-                    <label for="name">收件人姓名:</label>
-                    <input type="text" id="name">
-                </div>
-                <div class="form_group">
-                    <label for="tel">電話:</label>
-                    <input type="tel" id="tel">
-                </div>
-            </div>
-            <div class="form_group">
-                <label for="email">Email:</label>
-                <input type="email" id="email">
-            </div>
-            <div class="form_group">
-                <label for="waytopay">付款方式:</label>
-                <select name="waytopay" id="waytopay">
-                    <option value="" selected="selected" disabled="disabled">請選擇付款方式</option>
-                    <option value="WebATM">WebATM</option>
-                    <option value="ATM">ATM</option>
-                    <option value="Credit">Credit</option>
-                    <option value="ApplePay">ApplePay</option>
-                </select>
-            </div>
-            <div class="back">
-                <a href="chart.html" class="back_btn">
-                    <i class="fas fa-chevron-left"></i>
-                    返回購物車</a>
-                <a href="chart_check.html" class="btn">確認送出</a>
-            </div>
-
+    <div class="container">
+        <!-- 結帳進度條 -->
+        <div class="step">
+            <ul>
+                <li>
+                    <span>1</span>
+                    <p>購物車</p>
+                    <div class="bar "></div>
+                </li>
+                <li>
+                    <span>2</span>
+                    <p>填寫資料</p>
+                    <div class="bar focus"></div>
+                </li>
+                <li>
+                    <span>3</span>
+                    <p>確認訂單</p>
+                    <div class="bar"></div>
+                </li>
+            </ul>
         </div>
 
-        <!-- 右側明細 -->
-        <div class="right">
-            <div class="product">
-                <img src="https://image.kkday.com/v2/image/get/h_650,c_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
-                    alt="">
-                <div class="product_info">
-                    <p class="title">Pingu企鵝家族的誕生</p>
-                    <p>NT$350 x1</p>
+        <!-- 外層 -->
+        <div class="outer">
+            <!-- 左側資料 -->
+            <div class="left">
+                <div class="forms">
+                    <div class="form_group">
+                        <label for="name">收件人姓名:</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form_group">
+                        <label for="tel">電話:</label>
+                        <input type="tel" id="tel">
+                    </div>
                 </div>
-            </div>
-            <div class="product">
-                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
-                    alt="">
-                <div class="product_info">
-                    <p class="title">小小兵大視界特展門票</p>
-                    <p>NT$159 x1</p>
+                <div class="form_group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
                 </div>
-            </div>
-            <div class="product">
-                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
-                    alt="">
-                <div class="product_info">
-                    <p class="title">湯姆貓與傑利鼠特展門票</p>
-                    <p>NT$280 x1</p>
+                <div class="form_group">
+                    <label for="waytopay">付款方式:</label>
+                    <select name="waytopay" id="waytopay">
+                        <option value="" selected="selected" disabled="disabled">請選擇付款方式</option>
+                        <option value="WebATM">WebATM</option>
+                        <option value="ATM">ATM</option>
+                        <option value="Credit">Credit</option>
+                        <option value="ApplePay">ApplePay</option>
+                    </select>
                 </div>
+                <div class="back">
+                    <a href="chart.html" class="back_btn">
+                        <i class="fas fa-chevron-left"></i>
+                        返回購物車</a>
+                    <a href="chart_check.html" class="btn">確認送出</a>
+                </div>
+
             </div>
-            <div class="totalprice">
-                <p>總計</p>
-                <p class="total">NT$789</p>
+
+            <!-- 右側明細 -->
+            <div class="right">
+                <div class="product">
+                    <img src="https://image.kkday.com/v2/image/get/h_650,c_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
+                        alt="">
+                    <div class="product_info">
+                        <p class="title">Pingu企鵝家族的誕生</p>
+                        <p>NT$350 x1</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
+                        alt="">
+                    <div class="product_info">
+                        <p class="title">小小兵大視界特展門票</p>
+                        <p>NT$159 x1</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
+                        alt="">
+                    <div class="product_info">
+                        <p class="title">湯姆貓與傑利鼠特展門票</p>
+                        <p>NT$280 x1</p>
+                    </div>
+                </div>
+                <div class="totalprice">
+                    <p>總計</p>
+                    <p class="total">NT$789</p>
+                </div>
             </div>
         </div>
-
 
     </div>
 
@@ -185,6 +187,10 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/chart_info.js"></script>
 </body>
 
 </html>

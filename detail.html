@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/detail.css">
@@ -25,12 +32,27 @@
                 <li><a href="chart.html">購物車</a></li>
                 <li><a href="#">登入/註冊</a></li>
             </ul>
+            <a href="#" class="hamBar"><i class="fas fa-bars"></i></a>
         </div>
     </nav>
 
     <!-- 輪播圖 -->
-    <div class="container">
-        <div class="slide"></div>
+    <div class="container title_pic">
+        <div class="owl-carousel owl-theme title_pic">
+            <div class="item">
+                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20211110110932_x14tx/jpg"
+                    alt="">
+            </div>
+            <div class="item">
+                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20211110110931_KOq0c/jpg"
+                    alt="">
+            </div>
+            <div class="item">
+                <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20211110110930_eZqqG/jpg"
+                    alt="">
+            </div>
+
+        </div>
     </div>
 
     <!-- 外層 -->
@@ -40,7 +62,7 @@
 
             <!-- 標題 -->
             <div class="product_name">
-                <h1>Pingu企鵝家族的誕生</h1>
+                <h1>Pingu企鵝家族的誕生:週年巡迴特展門票</h1>
                 <div class="btn_wish">
                     <i class="far fa-heart"></i>
                 </div>
@@ -215,6 +237,14 @@
         </div>
     </footer>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/detail.js"></script>
 </body>
 
 </html>

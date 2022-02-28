@@ -24,107 +24,110 @@
                 <li><a href="chart.html">購物車</a></li>
                 <li><a href="#">登入/註冊</a></li>
             </ul>
+            <a href="#" class="hamBar"><i class="fas fa-bars"></i></a>
         </div>
     </nav>
 
-    <!-- 結帳進度條 -->
-    <div class="container step">
-        <ul>
-            <li>
-                <span>1</span>
-                <p>購物車</p>
-                <div class="bar focus"></div>
-            </li>
-            <li>
-                <span>2</span>
-                <p>填寫資料</p>
-                <div class="bar"></div>
-            </li>
-            <li>
-                <span>3</span>
-                <p>確認訂單</p>
-                <div class="bar"></div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- 結帳主頁 -->
-    <div class="container outer d-flex">
-        <!-- 左側 -->
-        <div class="left">
-            <table>
-                <tr>
-                    <th width="17%" class="pic"></th>
-                    <th width="25%">品名</th>
-                    <th width="15%">單價</th>
-                    <th width="10%">數量</th>
-                    <th width="18%" class="total">小計</th>
-                    <th width="7%"></th>
-                </tr>
-                <tr>
-                    <td class="pic">
-                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
-                            alt="">
-                    </td>
-                    <td class="title">Pingu企鵝家族的誕生</td>
-                    <td>NT$350</td>
-                    <td>1</td>
-                    <td>NT$350</td>
-                    <td class="delete">
-                        <i class="fas fa-times"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="pic">
-                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
-                            alt="">
-                    </td>
-                    <td class="title">小小兵大視界特展門票</td>
-                    <td>NT$159</td>
-                    <td>1</td>
-                    <td>NT$159</td>
-                    <td class="delete">
-                        <i class="fas fa-times"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="pic">
-                        <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
-                            alt="">
-                    </td>
-                    <td class="title">湯姆貓與傑利鼠特展門票</td>
-                    <td>NT$280</td>
-                    <td>1</td>
-                    <td>NT$280</td>
-                    <td class="delete">
-                        <i class="fas fa-times"></i>
-                    </td>
-                </tr>
-            </table>
+    <div class="container">
+        <!-- 結帳進度條 -->
+        <div class="step">
+            <ul>
+                <li>
+                    <span>1</span>
+                    <p>購物車</p>
+                    <div class="bar focus"></div>
+                </li>
+                <li>
+                    <span>2</span>
+                    <p>填寫資料</p>
+                    <div class="bar"></div>
+                </li>
+                <li>
+                    <span>3</span>
+                    <p>確認訂單</p>
+                    <div class="bar"></div>
+                </li>
+            </ul>
         </div>
 
-        <!-- 右側 -->
-        <div class="right">
-            <div class="product_sum">
-                <p>商品總額</p>
-                <p class="price">NT$789</p>
-            </div>
-            <!-- 輸入折扣碼 -->
-            <div class="discount_code">
-                <input type="text" placeholder="請輸入優惠碼">
-                <button type="button">套用</button>
+        <!-- 結帳主頁 -->
+        <div class="outer d-flex">
+            <!-- 左側 -->
+            <div class="left">
+                <table>
+                    <tr>
+                        <th width="17%" class="pic"></th>
+                        <th width="25%">品名</th>
+                        <th width="15%">單價</th>
+                        <th width="15%">數量</th>
+                        <th width="18%" class="total">小計</th>
+                        <th width="7%"></th>
+                    </tr>
+                    <tr>
+                        <td class="pic">
+                            <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_123992/20220128044356_ZDj9D/jpg"
+                                alt="">
+                        </td>
+                        <td class="title">Pingu企鵝家族的誕生</td>
+                        <td>NT$350</td>
+                        <td>1</td>
+                        <td>NT$350</td>
+                        <td class="delete">
+                            <i class="fas fa-times"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pic">
+                            <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124241/20220105072817_3Rqzy/jpg"
+                                alt="">
+                        </td>
+                        <td class="title">小小兵大視界特展門票</td>
+                        <td>NT$159</td>
+                        <td>1</td>
+                        <td>NT$159</td>
+                        <td class="delete">
+                            <i class="fas fa-times"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pic">
+                            <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_124698/20211203040056_LU4AH/jpg"
+                                alt="">
+                        </td>
+                        <td class="title">湯姆貓與傑利鼠特展門票</td>
+                        <td>NT$280</td>
+                        <td>1</td>
+                        <td>NT$280</td>
+                        <td class="delete">
+                            <i class="fas fa-times"></i>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <div class="discount_info">
-                <p>折扣</p>
-                <p class="price">- $0</p>
-            </div>
+            <!-- 右側 -->
+            <div class="right">
+                <div class="product_sum">
+                    <p>商品總額</p>
+                    <p class="price">NT$789</p>
+                </div>
+                <!-- 輸入折扣碼 -->
+                <div class="discount_code">
+                    <input type="text" placeholder="請輸入優惠碼">
+                    <button type="button">套用</button>
+                </div>
 
-            <div class="total_price">
-                <p>應付金額</p>
-                <p class="price">NT$789</p>
+                <div class="discount_info">
+                    <p>折扣</p>
+                    <p class="price">- $0</p>
+                </div>
+
+                <div class="total_price">
+                    <p>應付金額</p>
+                    <p class="price">NT$789</p>
+                </div>
+                <a href="chart_info.html" class="btn">前往結帳</a>
             </div>
-            <a href="chart_info.html" class="btn">前往結帳</a>
         </div>
     </div>
 
@@ -194,7 +197,10 @@
     </footer>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/chart.js"></script>
 </body>
 
 </html>
